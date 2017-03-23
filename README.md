@@ -33,6 +33,7 @@ make native
 
 ### Vagrant Terminal Tab 3:
 
+#### Execution 1 : Sample chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
 **Install chaincode on the peer**
 
 `
@@ -93,7 +94,7 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 ```
 
 --------------------------------------------------------------------------------
-
+#### Execution 2 : Sample chaincode [marbles02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/marbles02)
 ## Test Marble chaincode :
 
 **Install**
