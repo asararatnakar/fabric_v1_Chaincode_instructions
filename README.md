@@ -3,7 +3,7 @@
 #### How to test your chaincode from Vagrant :
 You wrote some chaincode on Fabric V1.0 and wanted to test the same on default channel with out any hassles ?
 
-Probably you are on the right page and following commands might help you  :)
+Probably you are on the right page and follwing are the bunch of commands that might help you
 
 ```
 git clone https://github.com/hyperledger/fabric.git 
