@@ -34,7 +34,8 @@ make native
 **Instantiate chaincode**
 
 `peer chaincode instantiate -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -c '{"Args":["init","a", "100", "b","200"]}'`
-**NOTE**: check troubleshoot
+
+**NOTE**: check [troubleshoot](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#trooubleshoot)
 
 **Invoke**
 
@@ -75,28 +76,33 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 
 
 ## Test Marble chaincode :
+
 **Install**
+
 ```
 peer chaincode install -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/marbles02
 ```
+
 **Instantiate**
 ```
 peer chaincode instantiate -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/marbles02 -c '{"Args":[""]}'
 ```
+
 **Invoke**
 ```
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["initMarble","marble1","blue","35","tom"]}' 
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["initMarble","marble2","red","50","tom"]}'
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["initMarble","marble3","blue","70","tom"]}'
 ```
-
-**Query**
 ```
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["transferMarble","marble2","jerry"]}'
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["transferMarblesBasedOnColor","blue","jerry"]}'
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["delete","marble1"]}'
 ```
-Query
+
+**Query**
+```
 peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["readMarble","marble1"]}'
 peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["getMarblesByRange","marble1","marble3"]}'
 peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["getHistoryForMarble","marble1"]}'
+```
