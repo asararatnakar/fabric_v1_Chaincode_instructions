@@ -55,11 +55,14 @@ Query for the value of **"a"**
 
 `peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'`
 
-
-Don't forget to clear ledger and chaincode containers(optional) after each run!
+#### cleanup
+Don't forget to clear ledger after each run!
 ```
 rm -rf /var/hyperledger/*
+```
+And may be chaincode containers(*optional*)
 
+```
 docker rm -f $(docker ps -aq)
 
 docker rmi -f $(docker images | grep "dev-jdoe" | awk '{print $3}')
@@ -77,7 +80,7 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger
 Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode detected for file src/github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02/chaincode_example02: 100755
 ```
 
-
+--------------------------------------------------------------------------------
 
 ## Test Marble chaincode :
 
