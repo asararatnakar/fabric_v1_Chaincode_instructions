@@ -110,5 +110,5 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
   
      **./build/bin/peer node start -o 127.0.0.1:7050**
 --------------------------------------------------------------------------------
-#### Execution 2 : How to [test](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-cc.MD#how-to-execute-marbles02-sample-chaincode-from-vagrant-environment) marbles02 chaincode [marbles02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/marbles02)
+#### Execution 2 : How to [test](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-cc.MD#how-to-execute-marbles02-sample-chaincode-from-vagrant-environment) marbles02 chaincode
 
