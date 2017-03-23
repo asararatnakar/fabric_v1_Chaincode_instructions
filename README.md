@@ -83,7 +83,8 @@ docker rmi -f $(docker images | grep "dev-jdoe" | awk '{print $3}')
 
 #### Troubleshoot
 
-Are you seeing similar error ? You might have chaincode executable left after go build. You must consider deleting that file or any executable files in GOPATH
+* Are you seeing **Illegal file mode detected** error ? 
+  That means chaincode executable left after compiling & building your chaincode with **go build**.You must consider deleting that file or any executable files in GOPATH
 
 ```
 peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
@@ -92,7 +93,17 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger
 
 Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode detected for file src/github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02/chaincode_example02: 100755
 ```
-
+* Are you trying on your non-vagrant machine ? 
+  1. Ensure you have Docker engine/machine setup on your machine.
+  2. To build the native binaries, you would need to install some platform dependent tools
+     For example on Ubuntu mahcine you would need to install **libltdl-dev**
+     `sudo apt-get install libltdl-dev`
+  3. You might need to prepend with **./build/bin/** for the **orderer** and **peer** commands
+  Example: Start the orderer and peer with following command
+  
+     **./build/bin/orderer**
+  
+     **./build/bin/peer node start -o 127.0.0.1:7050**
 --------------------------------------------------------------------------------
 #### Execution 2 : Sample chaincode [marbles02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/marbles02)
 ## Test Marble chaincode :
