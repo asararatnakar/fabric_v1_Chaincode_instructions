@@ -4,31 +4,31 @@
 
 This demonstrates for Linux Mahcine Ubuntu 16.04
 
-Pre-requisites:
-Ensure you have installed Docker engine/machine on your native machine.
+#### Pre-requisites:
+* Ensure you have installed Docker engine/machine on your native machine.
 
-To build the native binaries, you would need to install some platform dependent tools For example on Ubuntu mahcine I install 
+* To build the native binaries, you would need to install some platform dependent tools For example on Ubuntu mahcine I install 
 **libltdl-dev**
 ```
 sudo apt-get install libltdl-dev
 ```
-
-Build the natives with make command
+### Terminal window Tab 1: 
+* Build the natives with make command
 ```
 make native
 ```
 
+**Start the orderer**
+
 `./build/bin/orderer`
 
-### Vagrant Terminal Tab 2: 
+### Terminal window Tab 2: 
 
 **Start the peer**
 
 `./build/bin/peer node start -o 127.0.0.1:7050`
 
-### Vagrant Terminal Tab 3:
-
-#### Execution 1 : Sample chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
+### Terminal window Tab 2: Sample chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02) 
 **Install chaincode on the peer**
 
 `
