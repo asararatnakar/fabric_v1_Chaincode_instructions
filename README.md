@@ -95,24 +95,8 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger
 
 Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode detected for file src/github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02/chaincode_example02: 100755
 ```
-## MISC
-**Test chaincode on Non-vagrant **
-
-  1. Ensure you have Docker engine/machine setup on your machine.
-
-  2. To build the native binaries, you would need to install some platform dependent tools
-     For example on Ubuntu mahcine you would need to install **libltdl-dev**
-     
-     `sudo apt-get install libltdl-dev`
-
-  3. You might need to prepend **./build/bin/** for the **orderer** and **peer** commands.
-      For example: Start the orderer and peer with following command
-  
-     **./build/bin/orderer**
-  
-     **./build/bin/peer node start -o 127.0.0.1:7050**
-
-     More details [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
+* Do you want to test your chaincode on your non-vagrant environment ?
+  more details can be obtained [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
      
 --------------------------------------------------------------------------------
 
