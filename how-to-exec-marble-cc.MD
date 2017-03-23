@@ -1,4 +1,4 @@
-## How to execute marbles02 sample chaincode from vagrant environment
+## How to test marbles02 sample chaincode from vagrant environment
 
 #### Execution 2 : Sample chaincode [marbles02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/marbles02)
 
