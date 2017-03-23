@@ -8,9 +8,7 @@ Probably you are on the right page and follwing are the bunch of commands that m
 ```
 git clone https://github.com/hyperledger/fabric.git 
 ```
-
-This has been verified as of fabric commit level **0ef35105**
-
+Build native binaries
 ```
 cd fabric/devenv
 
