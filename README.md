@@ -8,7 +8,7 @@ Probably you are on the right page and below commands might help you  :)
 git clone https://github.com/hyperledger/fabric.git 
 ```
 
-This has been verified on fabric commit level **0ef35105**
+This has been verified as of fabric commit level **0ef35105**
 
 ```
 cd fabric/devenv
@@ -99,6 +99,11 @@ peer chaincode install -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledg
 **Instantiate**
 ```
 peer chaincode instantiate -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/marbles02 -c '{"Args":[""]}'
+```
+After succesful execution of the above command, you would see a chaincode container coming up
+```
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS               NAMES
+c74a34f846f9     dev-jdoe-mycc-1.0    "chaincode -peer.a..."   1 second ago        Up 1 second       dev-jdoe-mycc-1.0
 ```
 
 **Invoke**
