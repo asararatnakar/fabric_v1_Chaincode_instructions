@@ -84,7 +84,8 @@ docker rmi -f $(docker images | grep "dev-jdoe" | awk '{print $3}')
 #### Troubleshoot
 
 * Are you seeing **Illegal file mode detected** error ? 
-  That means chaincode executable left after compiling & building your chaincode with **go build**.You must consider deleting that file or any executable files in GOPATH
+
+  That means chaincode executable been left after building your chaincode with **go build**.You must consider deleting that file or revoke any executable permission for those files under GOPATH
 
 ```
 peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
