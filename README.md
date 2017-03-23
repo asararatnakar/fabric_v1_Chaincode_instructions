@@ -10,23 +10,29 @@ git clone https://github.com/hyperledger/fabric.git
 
 This has been verified on fabric commit level **0ef35105**
 
-Pre-Req
 ```
 cd fabric/devenv
 
 vagrant up && vagrant ssh
 
-cd $GOPATH/src/github.com/hyperledger/fabric/devenv
+cd $GOPATH/src/github.com/hyperledger/fabric
 make native
 ```
 
-### Vagrant window 1: Start the Orderer
+### Vagrant Terminal Tab 1: 
+
+**Start the Orderer**
+
 `orderer`
 
-### Vagrant window 2: Start the peer 
+### Vagrant Terminal Tab 2: 
+
+**Start the peer**
+
 `peer node start -o 127.0.0.1:7050`
 
-### Vagrant window 3: Issue commands
+### Vagrant Terminal Tab 3:
+
 **Install chaincode on the peer**
 
 `
@@ -96,8 +102,9 @@ peer chaincode instantiate -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyper
 ```
 
 **Invoke**
-```
+
 * Create 3 marbles
+```
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["initMarble","marble1","blue","35","tom"]}' 
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["initMarble","marble2","red","50","tom"]}'
 peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["initMarble","marble3","blue","70","tom"]}'
