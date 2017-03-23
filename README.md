@@ -8,7 +8,7 @@ Probably you are on the right page and below commands might help you  :)
 git clone https://github.com/hyperledger/fabric.git 
 ```
 
-This has been verified on the commit level 0ef35105
+This has been verified on fabric commit level **0ef35105**
 
 Pre-Req
 ```
