@@ -1,7 +1,8 @@
 # How to test Fabric V1.0 Chaincode 
 
-How to test your chaincode from Vagrant :
-You wrote some chaincode on Fabric V1.0 and now you are wondering on how to test the chaincode ?? Probably you are on the right page :)
+#### How to test your chaincode from Vagrant :
+You wrote some chaincode on Fabric V1.0 and wondering on how to test the chaincode ?? 
+Probably you are on the right page and below commands might help you  :)
 
 ```
 git clone https://github.com/hyperledger/fabric.git 
@@ -27,9 +28,11 @@ make native
 
 ### Vagrant window 3: Issue commands
 **Install chaincode on the peer**
+
 `peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
 
 **Instantiate chaincode**
+
 `peer chaincode instantiate -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -c '{"Args":["init","a", "100", "b","200"]}'`
 **NOTE**: check troubleshoot
 
@@ -58,7 +61,7 @@ docker rm -f $(docker ps -aq)
 docker rmi -f $(docker images | grep "dev-jdoe" | awk '{print $3}')
 ```
 
-**Trooubleshoot**
+#### Trooubleshoot
 
 Are you seeing similar error ? You might have left chaincode executable left after go build. You must consider deleting that file or similar executable files.
 
