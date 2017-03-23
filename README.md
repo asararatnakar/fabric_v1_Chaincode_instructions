@@ -46,6 +46,12 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledge
 peer chaincode instantiate -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -c '{"Args":["init","a", "100", "b","200"]}'
 `
 
+After succesful chaincode instantiation, you would see chaincode container comes up
+```
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS               NAMES
+c74a34f846f9     dev-jdoe-mycc-1.0    "chaincode -peer.a..."   1 second ago        Up 1 second       dev-jdoe-mycc-1.0
+```
+
 **Invoke**
 
 Issue an invoke to move "10" from "a" to "b":
@@ -100,10 +106,10 @@ peer chaincode install -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledg
 ```
 peer chaincode instantiate -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/marbles02 -c '{"Args":[""]}'
 ```
-After succesful execution of the above command, you would see a chaincode container coming up
+After succesful chaincode instantiation , you would see a chaincode container coming up
 ```
 CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS               NAMES
-c74a34f846f9     dev-jdoe-mycc-1.0    "chaincode -peer.a..."   1 second ago        Up 1 second       dev-jdoe-mycc-1.0
+63fb81f6849e        dev-jdoe-marbles-1  "chaincode -peer.a..."   1 second ago        Up 1 second    dev-jdoe-marbles-1
 ```
 
 **Invoke**
