@@ -13,7 +13,7 @@ This demonstrates for Linux Mahcine Ubuntu 16.04
 sudo apt-get install libltdl-dev
 ```
 
-* Build the natives with make command
+* Build the native binaries **peer** and **orderer** with make command
 ```
 make native
 ```
