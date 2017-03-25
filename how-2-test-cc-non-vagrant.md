@@ -15,6 +15,8 @@ sudo apt-get install libltdl-dev
 
 * Build the native binaries **peer** and **orderer** with make command
 ```
+cd $GOPATH/src/github.com/hyperledger/fabric
+
 make native
 ```
 
