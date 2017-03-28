@@ -15,7 +15,8 @@ cd fabric/devenv
 vagrant up && vagrant ssh
 
 cd $GOPATH/src/github.com/hyperledger/fabric
-make native
+
+make clean peer orderer
 ```
 
 ### Vagrant Terminal Tab 1: 
