@@ -1,13 +1,17 @@
 # How to test Fabric V1.0 Chaincode 
 
 #### How to test your chaincode from Vagrant :
-You wrote some chaincode on Fabric V1.0 and wanted to test the same on default channel with out any hassles ?
+You wrote some chaincode on Fabric V1.0 and wanted to quickly verify the dunctionality with default channel and with out any hassles of creating new channel etc ...
+Following are the instructions for the same, below are the bunch of commands that might help you
 
-Probably you are on the right page and follwing are the bunch of commands that might help you
-
+--------------------------------------------------------------------------------
 ```
+mkdir -p $GOPATH/src/github.com/hyperledger
+cd $GOPATH/src/github.com/hyperledger
 git clone https://github.com/hyperledger/fabric.git 
+
 ```
+
 Build native binaries
 ```
 cd fabric/devenv
@@ -18,6 +22,7 @@ cd $GOPATH/src/github.com/hyperledger/fabric
 
 make clean peer orderer
 ```
+--------------------------------------------------------------------------------
 
 ### Vagrant Terminal Tab 1: 
 
@@ -25,21 +30,27 @@ make clean peer orderer
 
 `orderer`
 
+--------------------------------------------------------------------------------
+
 ### Vagrant Terminal Tab 2: 
 
 **Start the peer**
 
 `peer node start -o 127.0.0.1:7050`
 
+--------------------------------------------------------------------------------
+
 ### Vagrant Terminal Tab 3:
 
-#### Execution 1 : Sample chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
+This uses chaincode example program [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
 **Install chaincode on the peer**
 
 `
 peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
 
 **NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#trooubleshoot)
+
+--------------------------------------------------------------------------------
 
 **Instantiate chaincode**
 
@@ -53,6 +64,8 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 c74a34f846f9     dev-jdoe-mycc-1.0    "chaincode -peer.a..."   1 second ago        Up 1 second       dev-jdoe-mycc-1.0
 ```
 
+--------------------------------------------------------------------------------
+
 **Invoke**
 
 Issue an invoke to move "10" from "a" to "b":
@@ -61,12 +74,15 @@ Issue an invoke to move "10" from "a" to "b":
 
 Wait a few seconds for the operation to complete
 
+--------------------------------------------------------------------------------
 
 **Query**
 
 Query for the value of **"a"**
 
 `peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'`
+
+--------------------------------------------------------------------------------
 
 #### cleanup
 Don't forget to clear ledger after each run!
@@ -80,6 +96,7 @@ docker rm -f $(docker ps -aq)
 
 docker rmi -f $(docker images | grep "dev-jdoe" | awk '{print $3}')
 ```
+--------------------------------------------------------------------------------
 
 #### Troubleshoot
 
@@ -94,10 +111,11 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger
 
 Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode detected for file src/github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02/chaincode_example02: 100755
 ```
-* Do you want to test your chaincode on your non-vagrant environment ?
-  more details can be obtained [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
-     
 --------------------------------------------------------------------------------
 
-#### Execution 2 : How to [test](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-cc.MD#how-to-execute-marbles02-sample-chaincode-from-vagrant-environment) marbles02 chaincode
+#### Other samples
 
+* How to [test](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-cc.MD#how-to-execute-marbles02-sample-chaincode-from-vagrant-environment) marbles02 chaincode
+
+* calling chaincode to chaincode, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/call-chaincode-to-chaincode.md) 
+*  Test your chaincode on non-vagrant environment , details [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
