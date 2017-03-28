@@ -24,8 +24,10 @@ vagrant up && vagrant ssh
 
 cd $GOPATH/src/github.com/hyperledger/fabric
 
-make clean peer orderer
+make peer orderer
 ```
+**_NOTE:_** If required do `make clean` and build the binaries
+
 --------------------------------------------------------------------------------
 
 ### Vagrant Terminal Tab 1: 
