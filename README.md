@@ -1,4 +1,4 @@
-# How to test Fabric V1.0 Chaincode 
+# How to test hyperledger fabric V1.0 chaincode from CLI
 
 #### How to test your chaincode from Vagrant :
 You wrote some chaincode on Fabric V1.0 and now you wanted to quickly verify the functionality with default channel and with out any hassles of creating new channel etc ...?
