@@ -1,13 +1,16 @@
 # How to test Fabric V1.0 Chaincode 
 
 #### How to test your chaincode from Vagrant :
-You wrote some chaincode on Fabric V1.0 and wanted to quickly verify the dunctionality with default channel and with out any hassles of creating new channel etc ...
-Following are the instructions for the same, below are the bunch of commands that might help you
+You wrote some chaincode on Fabric V1.0 and now you wanted to quickly verify the functionality with default channel and with out any hassles of creating new channel etc ...?
+
+Following are the instructions that might help you
 
 --------------------------------------------------------------------------------
 ```
 mkdir -p $GOPATH/src/github.com/hyperledger
+
 cd $GOPATH/src/github.com/hyperledger
+
 git clone https://github.com/hyperledger/fabric.git 
 
 ```
