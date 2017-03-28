@@ -6,6 +6,7 @@ You wrote some chaincode on Fabric V1.0 and now you wanted to quickly verify the
 Following are the instructions that might help you
 
 --------------------------------------------------------------------------------
+#### Pre-requisites:
 ```
 mkdir -p $GOPATH/src/github.com/hyperledger
 
