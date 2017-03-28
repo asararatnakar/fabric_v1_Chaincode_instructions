@@ -43,7 +43,7 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledge
 **Instantiate chaincode**
 
 `
-peer chaincode instantiate -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -c '{"Args":["init","a", "100", "b","200"]}'
+peer chaincode instantiate -o 127.0.0.1:7050 -n mycc -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}'
 `
 
 After succesful chaincode instantiation, you would see chaincode container comes up
