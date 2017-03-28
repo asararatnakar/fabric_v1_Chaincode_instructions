@@ -5,24 +5,9 @@ Do you want to quickly verify calling chaincode functions from another chaincode
 
 Follwing commands might help you, give a try 
 
-```
-mkdir -p $GOPATH/src/github.com/hyperledger
+#### Pre-requisites:
+Refer [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#pre-requisites)
 
-cd $GOPATH/src/github.com/hyperledger
-
-git clone https://github.com/hyperledger/fabric.git 
-```
-
-Build native binaries
-```
-cd fabric/devenv
-
-vagrant up && vagrant ssh
-
-cd $GOPATH/src/github.com/hyperledger/fabric
-
-make clean peer orderer
-```
 --------------------------------------------------------------------------------
 
 ### Vagrant Terminal Tab 1: 
