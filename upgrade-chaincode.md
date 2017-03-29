@@ -81,7 +81,7 @@ Oops !!! query function not available ?
 
 ## UPGRADE
 
-Now that you realized there is no function called **query** available in your chaincode and you added the same in your chaincode (call it **example02** this time) and wanted to upgrade your chaincode with **new version**.
+You lately realized that there is no function called **query** available in your chaincode and you added the same in your new chaincode implementation (call it **example02**), and wanted to upgrade your chaincode with **new version**.
 
 #### Install chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
 `
