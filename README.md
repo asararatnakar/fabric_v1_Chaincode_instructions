@@ -119,10 +119,12 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 ```
 --------------------------------------------------------------------------------
 
-#### Other samples
+#### few more samples:
 
-* commands to test **marbles02 chaincode**, Instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-chaincode.md)
+* commands to test chaincode upgrade functionality, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/upgrade-chaincode.md)
 
 * commands for **Calling chaincode to chaincode**, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/call-chaincode-to-chaincode.md) 
 
 * commands to test chaincode on **non-vagrant environment (ubuntu)** , details [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
+
+* commands to test **marbles02 chaincode**, Instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-chaincode.md)
