@@ -125,4 +125,4 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 
 * commands for **Calling chaincode to chaincode**, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/call-chaincode-to-chaincode.md) 
 
-* commands to test chaincode on non-vagrant environment (ubuntu) , details [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
+* commands to test chaincode on **non-vagrant environment (ubuntu)** , details [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
