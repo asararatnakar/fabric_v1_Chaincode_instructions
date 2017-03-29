@@ -121,7 +121,7 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 
 #### few more samples:
 
-* commands to test chaincode upgrade functionality, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/upgrade-chaincode.md)
+* commands to test **chaincode upgrade** functionality, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/upgrade-chaincode.md)
 
 * commands for **Calling chaincode to chaincode**, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/call-chaincode-to-chaincode.md) 
 
