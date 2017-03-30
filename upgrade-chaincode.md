@@ -87,6 +87,7 @@ You lately realized that there is no function called **query** available in your
 `
 peer chaincode install -o 127.0.0.1:7050 -n mycc -v 2.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
 `
+
 **NOTE:**  Notice the change in the version number to **2.0** and the chaincode path to **example02**
 
 #### Upgrade
@@ -94,6 +95,7 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc -v 2.0 -p github.com/hyperledge
 `
 peer chaincode upgrade -o 127.0.0.1:7050 -n mycc -v 2.0 -c '{"Args":["init","a", "100", "b","200"]}'
 `
+
 **NOTE** notice **upgrade** with the new version **2.0**
 
 #### Invoke
