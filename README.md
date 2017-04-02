@@ -54,7 +54,7 @@ This uses chaincode example program [example02](https://github.com/hyperledger/f
 `
 peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
 
-**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#trooubleshoot)
+**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
 --------------------------------------------------------------------------------
 
@@ -121,11 +121,11 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 
 #### few more samples:
 * commands to create channel and test chaincode on the custom channel
-  Instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/chaincode-with-custom-channel.md)
-* commands to test **chaincode upgrade** functionality, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/upgrade-chaincode.md)
+  Instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/chaincode-with-custom-channel.md)
+* commands to test **chaincode upgrade** functionality, instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/upgrade-chaincode.md)
 
-* commands for **Calling chaincode to chaincode**, instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/call-chaincode-to-chaincode.md) 
+* commands for **Calling chaincode to chaincode**, instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/call-chaincode-to-chaincode.md) 
 
-* commands to test chaincode on **non-vagrant environment (ubuntu)** , details [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-2-test-cc-non-vagrant.md)
+* commands to test chaincode on **non-vagrant environment (ubuntu)** , details [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/how-2-test-cc-non-vagrant.md)
 
-* commands to test **marbles02 chaincode**, Instructions [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/how-to-exec-marble-chaincode.md)
+* commands to test **marbles02 chaincode**, Instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/how-to-exec-marble-chaincode.md)

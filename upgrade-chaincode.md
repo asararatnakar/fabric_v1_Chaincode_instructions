@@ -6,7 +6,7 @@ Looking for chaincode upgrade instructions ?
 Following instructions might help you
 
 #### Pre-requisites:
-Refer [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#pre-requisites)
+Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#pre-requisites)
 
 --------------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledge
 `
 
 
-**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#trooubleshoot)
+**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
 --------------------------------------------------------------------------------
 

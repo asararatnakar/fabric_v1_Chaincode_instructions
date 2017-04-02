@@ -3,7 +3,7 @@
 #### From Vagrant Environment:
 
 #### Pre-requisites:
-Refer [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#pre-requisites)
+Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#pre-requisites)
 
 Also build the configtx tool, which is used to create two artifacts: 
   - orderer bootstrap block 
@@ -69,7 +69,7 @@ peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/
 `
 
 
-**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#trooubleshoot)
+**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
 --------------------------------------------------------------------------------
 

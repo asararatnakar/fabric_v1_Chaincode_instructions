@@ -6,7 +6,7 @@ Do you want to quickly verify calling chaincode functions from another chaincode
 Follwing commands might help you, give a try 
 
 #### Pre-requisites:
-Refer [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#pre-requisites)
+Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#pre-requisites)
 
 --------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ peer chaincode install -o 127.0.0.1:7050 -n mycc02 -v 1.0 -p github.com/hyperled
 peer chaincode install -o 127.0.0.1:7050 -n mycc05 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example05
 `
 
-**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#trooubleshoot)
+**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
 --------------------------------------------------------------------------------
 
@@ -102,11 +102,11 @@ Query Result: 300
 ```
 
 #### cleanup
-Refer [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#cleanup)
+Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#cleanup)
 
 #### Troubleshoot
 
-Refer [here](https://github.com/asararatnakar/V1_Chaincode/blob/master/README.md#troubleshoot)
+Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
 --------------------------------------------------------------------------------
 

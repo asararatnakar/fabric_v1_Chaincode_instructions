@@ -47,4 +47,4 @@ peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["getMarblesByRang
 peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["getHistoryForMarble","marble1"]}'
 ```
 
-**NOTE**: For troubleshoot check [here](https://github.com/asararatnakar/V1_Chaincode#troubleshoot)
+**NOTE**: For troubleshoot check [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions#troubleshoot)
