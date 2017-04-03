@@ -50,7 +50,7 @@ peer chaincode install -o 127.0.0.1:7050 -C mychannel -n mycc05 -v 1.0 -p github
 --------------------------------------------------------------------------------
 
 #### Instantiate
-Instantiate both chaincode example02 and example05
+Instantiate both chaincode example02 and example05 on same channel **mychannel**
 
 `
 peer chaincode instantiate -o 127.0.0.1:7050 -C mychannel -n mycc02 -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}'
