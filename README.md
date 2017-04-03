@@ -124,7 +124,11 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
   Instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/chaincode-with-custom-channel.md)
 * commands to test **chaincode upgrade** functionality, instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/upgrade-chaincode.md)
 
-* commands for **Calling chaincode to chaincode**, instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/call-chaincode-to-chaincode.md) 
+* commands for **Calling chaincode to chaincode**, instructions below
+ 
+ with [default channel](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/call-chaincode-to-chaincode.md) 
+ 
+ with [non-default channel](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/call-chaincode-to-chaincode-nondefault-chain.md) 
 
 * commands to test chaincode on **non-vagrant environment (ubuntu)** , details [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/how-2-test-cc-non-vagrant.md)
 
