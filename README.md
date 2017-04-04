@@ -120,10 +120,12 @@ Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode d
 --------------------------------------------------------------------------------
 
 #### few more samples:
+
 * commands to create channel and test chaincode on the custom channel
   Instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/chaincode-with-custom-channel.md)
 * commands to test **chaincode upgrade** functionality, instructions [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/upgrade-chaincode.md)
 
+* run chaincode in dev mode, instructions [here](https://github.com/hyperledger/fabric/blob/master/docs/source/peer-chaincode-devmode.rst)
 * commands for **Calling chaincode to chaincode**, instructions below
  
  with [default channel](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/call-chaincode-to-chaincode.md) 
