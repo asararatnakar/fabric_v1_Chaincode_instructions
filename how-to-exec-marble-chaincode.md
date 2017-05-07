@@ -5,7 +5,7 @@
 **Install**
 
 ```
-peer chaincode install -o 127.0.0.1:7050 -n marbles -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/marbles02
+peer chaincode install -n marbles -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/marbles02
 ```
 
 **Instantiate**
@@ -42,9 +42,9 @@ peer chaincode invoke -o 127.0.0.1:7050 -n marbles -c '{"Args":["delete","marble
 
 **Query**
 ```
-peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["readMarble","marble1"]}'
-peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["getMarblesByRange","marble1","marble3"]}'
-peer chaincode query -o 127.0.0.1:7050 -n marbles -c '{"Args":["getHistoryForMarble","marble1"]}'
+peer chaincode query -n marbles -c '{"Args":["readMarble","marble1"]}'
+peer chaincode query -n marbles -c '{"Args":["getMarblesByRange","marble1","marble3"]}'
+peer chaincode query -n marbles -c '{"Args":["getHistoryForMarble","marble1"]}'
 ```
 
 **NOTE**: For troubleshoot check [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions#troubleshoot)
