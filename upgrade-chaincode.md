@@ -32,7 +32,7 @@ Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/b
 Install chaincode example01 on the peer
 
 `
-peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example01
+peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example01
 `
 
 
@@ -68,7 +68,7 @@ Issue an invoke on **example01** to move "10" from "a" to "b":
 
 Query for the value of **"a"**
 
-`peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'`
+`peer chaincode query -n mycc -c '{"Args":["query","a"]}'`
 
 **OUTPUT**:
 ```
@@ -85,7 +85,7 @@ You lately realized that there is no function called **query** available in your
 
 #### Install chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
 `
-peer chaincode install -o 127.0.0.1:7050 -n mycc -v 2.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+peer chaincode install -n mycc -v 2.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
 `
 
 **NOTE:**  Notice the change in the version number to **2.0** and the chaincode path to **example02**
@@ -110,7 +110,7 @@ Issue an invoke on **example02** to move "10" from "a" to "b":
 
 Query for the value of **"a"**
 
-`peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'`
+`peer chaincode query -n mycc -c '{"Args":["query","a"]}'`
 
 **OUTPUT**:
 ```
