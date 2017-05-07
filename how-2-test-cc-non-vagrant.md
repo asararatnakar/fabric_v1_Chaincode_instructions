@@ -42,7 +42,7 @@ Sample chaincode [example02](https://github.com/hyperledger/fabric/tree/master/e
 **Install chaincode on the peer**
 
 `
-./build/bin/peer chaincode install -o 127.0.0.1:7050 -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
+./build/bin/peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
 
 **NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
@@ -71,4 +71,4 @@ Wait a few seconds for the operation to complete
 
 Query for the value of **"a"**
 
-`./build/bin/peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'`
+`./build/bin/peer chaincode query -n mycc -c '{"Args":["query","a"]}'`
