@@ -15,5 +15,5 @@ printf "\n\nInvoke on chaincode example02\n\n"
 peer chaincode invoke -o 127.0.0.1:7050 -n mycc -c '{"Args":["invoke","a","b","10"]}'
 
 printf "\n\nQuery on chaincode example02\n\n"
-peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'
+peer chaincode query -n mycc -c '{"Args":["query","a"]}'
 printf "\n\n********************** END ***********************\n\n"
