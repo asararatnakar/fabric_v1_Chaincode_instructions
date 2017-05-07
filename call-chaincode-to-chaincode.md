@@ -32,11 +32,11 @@ Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/b
 Install chaincode example02 and example05 on the peer
 
 `
-peer chaincode install -o 127.0.0.1:7050 -n mycc02 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+peer chaincode install -n mycc02 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
 `
 
 `
-peer chaincode install -o 127.0.0.1:7050 -n mycc05 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example05
+peer chaincode install -n mycc05 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example05
 `
 
 **NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
@@ -83,7 +83,7 @@ Wait a few seconds for the operation to complete
 
 Query for the value of **"a"**
 
-`peer chaincode query -o 127.0.0.1:7050 -n mycc02 -c '{"Args":["query","a"]}'`
+`peer chaincode query -n mycc02 -c '{"Args":["query","a"]}'`
 
 **OUTPUT**:
 ```
@@ -94,7 +94,7 @@ Query Result: 90
 
 Query for sum of assets **"a"** and **"b"** from example02 chaincode
 
-`peer chaincode query -o 127.0.0.1:7050 -n mycc05 -c '{"Args":["query","mycc02","sum"]}'`
+`peer chaincode query -n mycc05 -c '{"Args":["query","mycc02","sum"]}'`
 
 **OUTPUT**:
 ```
