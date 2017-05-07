@@ -38,11 +38,11 @@ Follwing commands might help you, give a try
 Install chaincode example02 and example05 on the peer
 
 `
-peer chaincode install -o 127.0.0.1:7050 -C mychannel -n mycc02 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+peer chaincode install -C mychannel -n mycc02 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
 `
 
 `
-peer chaincode install -o 127.0.0.1:7050 -C mychannel -n mycc05 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example05
+peer chaincode install -C mychannel -n mycc05 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example05
 `
 
 **NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
