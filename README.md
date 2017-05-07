@@ -86,7 +86,7 @@ Wait a few seconds for the operation to complete
 
 Query for the value of **"a"**
 
-`peer chaincode query -o 127.0.0.1:7050 -n mycc -c '{"Args":["query","a"]}'`
+`peer chaincode query -n mycc -c '{"Args":["query","a"]}'`
 
 --------------------------------------------------------------------------------
 
