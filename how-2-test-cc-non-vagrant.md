@@ -37,7 +37,7 @@ Create a directory for ledger
 CORE_PEER_FILESYSTEMPATH=hyperledger/production ./build/bin/peer node start -o 127.0.0.1:7050
 ```
 
-### Terminal window Tab 2: 
+### Terminal window Tab 3: 
 Sample chaincode [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02) 
 **Install chaincode on the peer**
 
