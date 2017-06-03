@@ -17,21 +17,21 @@ sudo apt-get install libltdl-dev
 ```
 cd $GOPATH/src/github.com/hyperledger/fabric
 
-make peer orderer
+make native
+
 ```
+Create a directory for ledger 
+`mkdir -p hyperledger/production`
 
 ### Terminal window Tab 1: 
 
 **Start the orderer**
 
-`./build/bin/orderer`
+`ORDERER_FILELEDGER_LOCATION=./hyperledger ./build/bin/orderer`
 
 ### Terminal window Tab 2: 
 
 **Start the peer**
-
-Create a directory for ledger 
-`mkdir -p hyperledger/production`
 
 ```
 CORE_PEER_FILESYSTEMPATH=hyperledger/production ./build/bin/peer node start -o 127.0.0.1:7050
