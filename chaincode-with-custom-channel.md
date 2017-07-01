@@ -1,4 +1,4 @@
-# How to test chaincode on a custom channel
+# How to test chaincode on a channel
 
 #### From Vagrant Environment:
 
@@ -31,7 +31,7 @@ Here `orderer.block` is the genesis block for the ordering service, where as the
 
 `cd $GOPATH/src/github.com/hyperledger/fabric`
 
-`ORDERER_GENERAL_LOGLEVEL=debug ORDERER_GENERAL_GENESISMETHOD=file ORDERER_GENERAL_GENESISFILE=$PWD/orderer.block orderer`
+`ORDERER_GENERAL_LOGLEVEL=debug ORDERER_GENERAL_GENESISPROFILE=SampleSingleMSPSolo orderer`
 
 --------------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ Here `orderer.block` is the genesis block for the ordering service, where as the
 **Start the peer**
 
 ```
-peer node start -o 127.0.0.1:7050
+peer node start
 ```
 
 --------------------------------------------------------------------------------

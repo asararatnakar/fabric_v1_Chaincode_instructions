@@ -17,7 +17,8 @@ Follwing commands might help you, give a try
 
 **Start the Orderer**
 
-`ORDERER_GENERAL_LOGLEVEL=debug ORDERER_GENERAL_GENESISMETHOD=file ORDERER_GENERAL_GENESISFILE=$PWD/orderer.block orderer`
+`ORDERER_GENERAL_LOGLEVEL=debug ORDERER_GENERAL_GENESISPROFILE=SampleSingleMSPSolo orderer`
+
 
 --------------------------------------------------------------------------------
 
@@ -25,7 +26,7 @@ Follwing commands might help you, give a try
 
 **Start the peer**
 
-`peer node start -o 127.0.0.1:7050  --peer-defaultchain=false`
+`peer node start`
 
 --------------------------------------------------------------------------------
 

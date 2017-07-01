@@ -53,32 +53,40 @@ make peer orderer
 This uses chaincode example program [example02](https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go/chaincode_example02)
 **Install chaincode on the peer**
 
-`
-peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
-
-**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
+`peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02`
 
 --------------------------------------------------------------------------------
+
 **Generate channel configuration (transaction)**
 
 `configtxgen -channelID myc -outputCreateChannelTx myc.tx -profile SampleSingleMSPChannel`
 
 --------------------------------------------------------------------------------
+
 **Create channel**
 
 `peer channel create -o 127.0.0.1:7050 -c myc -f myc.tx -t 10`
+
+--------------------------------------------------------------------------------
+
+**Join channel**
+
+`peer channel join -c myc -f myc.block`
+
 --------------------------------------------------------------------------------
 
 **Instantiate chaincode**
 
 `
-peer chaincode instantiate -o 127.0.0.1:7050 -n mycc -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}'
+peer chaincode instantiate -o 127.0.0.1:7050 -C myc -n mycc -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}'
 `
 
-After succesful chaincode instantiation, you would see chaincode container comes up
+After succesful chaincode instantiation, you would see chaincode container comes up.
+`docker ps`
+
 ```
-CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS               NAMES
-c74a34f846f9     dev-jdoe-mycc-1.0    "chaincode -peer.a..."   1 second ago        Up 1 second       dev-jdoe-mycc-1.0
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+ba2746fd32bf        dev-jdoe-mycc-0    "chaincode -peer.a..."   6 seconds ago       Up 5 seconds                            dev-jdoe-mycc-0
 ```
 
 --------------------------------------------------------------------------------
@@ -87,7 +95,7 @@ c74a34f846f9     dev-jdoe-mycc-1.0    "chaincode -peer.a..."   1 second ago     
 
 Issue an invoke to move "10" from "a" to "b":
 
- `peer chaincode invoke -o 127.0.0.1:7050 -n mycc -c '{"Args":["invoke","a","b","10"]}'`
+ `peer chaincode invoke -o 127.0.0.1:7050 -C myc -n mycc -c '{"Args":["invoke","a","b","10"]}'`
 
 Wait a few seconds for the operation to complete
 
@@ -102,6 +110,7 @@ Query for the value of **"a"**
 --------------------------------------------------------------------------------
 
 #### cleanup
+
 Don't forget to clear ledger after each run!
 ```
 rm -rf /var/hyperledger/*
@@ -116,18 +125,8 @@ docker rmi -f $(docker images | grep "dev-jdoe" | awk '{print $3}')
 --------------------------------------------------------------------------------
 
 #### Troubleshoot
+??
 
-* Are you seeing **Illegal file mode detected** error ? 
-
-  That means chaincode executable been left after building your chaincode with **go build**.You must consider deleting that file or revoke any executable permission for those files under GOPATH
-
-```
-peer chaincode install -o 127.0.0.1:7050 -n mycc1 -v 1 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
-2017-03-23 04:14:23.729 UTC [golang-platform] writeGopathSrc -> INFO 001 rootDirectory = /opt/gopath/src
-2017-03-23 04:14:23.729 UTC [container] WriteFolderToTarPackage -> INFO 002 rootDirectory = /opt/gopath/src
-
-Error: Error endorsing chaincode: rpc error: code = 2 desc = Illegal file mode detected for file src/github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02/chaincode_example02: 100755
-```
 --------------------------------------------------------------------------------
 
 #### few more samples:

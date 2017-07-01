@@ -18,7 +18,7 @@ vagrant up && vagrant ssh
 
 cd $GOPATH/src/github.com/hyperledger/fabric
 
-make native release-all
+make native
 ```
 **_NOTE:_** If required do `make clean` and build the binaries
 
@@ -36,7 +36,7 @@ git clone https://github.com/ITPeople-Blockchain/auction
 
 **Start the Orderer**
 
-`orderer`
+`ORDERER_GENERAL_GENESISPROFILE=SampleSingleMSPSolo orderer`
 
 --------------------------------------------------------------------------------
 
@@ -44,7 +44,7 @@ git clone https://github.com/ITPeople-Blockchain/auction
 
 **Start the peer**
 
-`peer node start -o 127.0.0.1:7050`
+`peer node start`
 
 --------------------------------------------------------------------------------
 

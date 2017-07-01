@@ -75,7 +75,7 @@ Query for the value of **"a"**
 Error: Error endorsing query: rpc error: code = 2 desc = Invalid invoke function name. Expecting "invoke"
 ```
 
-Oops !!! query function not available ?
+query function not available ?
 
 --------------------------------------------------------------------------------
 

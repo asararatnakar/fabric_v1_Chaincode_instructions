@@ -14,7 +14,7 @@ Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/b
 
 **Start the Orderer**
 
-`orderer`
+`ORDERER_GENERAL_GENESISPROFILE=SampleSingleMSPSolo orderer`
 
 --------------------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ Refer [here](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/b
 
 **Start the peer**
 
-`peer node start -o 127.0.0.1:7050`
+`peer node start`
 
 --------------------------------------------------------------------------------
 
@@ -38,8 +38,6 @@ peer chaincode install -n mycc02 -v 1.0 -p github.com/hyperledger/fabric/example
 `
 peer chaincode install -n mycc05 -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example05
 `
-
-**NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
 --------------------------------------------------------------------------------
 
