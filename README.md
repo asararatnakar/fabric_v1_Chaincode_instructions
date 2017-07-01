@@ -1,9 +1,9 @@
 # How to test hyperledger fabric V1.0 chaincode from CLI
 
 #### How to test your chaincode from Vagrant :
-You wrote some chaincode on Fabric V1.0 and now you wanted to quickly verify the functionality with default channel and with out any hassles of creating new channel etc ...?
+You wrote some chaincode on Fabric V1.0 and now you wanted to test your chaincode with simple of steps of creating a __channel  configuration__ , __create channel__ and __join channel__ ...?
 
-Following are the instructions that might help you
+Follow are the instructions:
 
 --------------------------------------------------------------------------------
 #### Pre-requisites:
@@ -12,7 +12,9 @@ mkdir -p $GOPATH/src/github.com/hyperledger
 
 cd $GOPATH/src/github.com/hyperledger
 
-git clone https://github.com/hyperledger/fabric.git 
+git clone https://github.com/hyperledger/fabric.git
+
+rm -rf /var/hyperledger/*
 
 ```
 
@@ -34,7 +36,7 @@ make peer orderer
 
 **Start the Orderer**
 
-`orderer`
+`ORDERER_GENERAL_GENESISPROFILE=SampleSingleMSPSolo orderer`
 
 --------------------------------------------------------------------------------
 
@@ -42,7 +44,7 @@ make peer orderer
 
 **Start the peer**
 
-`peer node start -o 127.0.0.1:7050`
+`peer node start`
 
 --------------------------------------------------------------------------------
 
@@ -56,6 +58,15 @@ peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/
 
 **NOTE**: If there are any issues with chaincode installation , please check [troubleshoot](https://github.com/asararatnakar/fabric_v1_Chaincode_instructions/blob/master/README.md#troubleshoot)
 
+--------------------------------------------------------------------------------
+**Generate channel configuration (transaction)**
+
+`configtxgen -channelID myc -outputCreateChannelTx myc.tx -profile SampleSingleMSPChannel`
+
+--------------------------------------------------------------------------------
+**Create channel**
+
+`peer channel create -o 127.0.0.1:7050 -c myc -f myc.tx -t 10`
 --------------------------------------------------------------------------------
 
 **Instantiate chaincode**
